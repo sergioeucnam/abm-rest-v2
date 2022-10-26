@@ -6,7 +6,11 @@ const PORT = require('./config').PORT;
 //middlewares
 app.use(morgan('dev'));
 app.use(express.json());
-app.use(cors());
+app.use(
+	cors({
+		origin: '*',
+	}),
+);
 
 //routes
 app.use(require('./routes/index.js'));
