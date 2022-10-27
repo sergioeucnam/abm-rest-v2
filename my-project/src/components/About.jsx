@@ -5,8 +5,8 @@ const About = () => {
 	return (
 		<>
 			<Navbar />
-			<div className='bg-orange-200 w-4/5 h-[80vh] mx-auto m-4 flex'>
-				<div className='bg-slate-200 w-2/5 font-bold rounded-lg h-full flex-wrap overflow-auto'>
+			<div className='bg-white w-4/5 h-[80vh] mx-auto m-4 flex'>
+				<div className='bg-slate-100 w-full px-8 font-bold rounded-lg h-full flex-wrap overflow-auto'>
 					<h1 className='text-4xl text-center'>About</h1>
 					<p className='text-2xl text-justify p-3 mt-8'>
 						This is a simple CRUD app made with React and NodeJS - Express
@@ -26,14 +26,13 @@ const About = () => {
 							command 'npm run test' in the root directory of the project.
 						</small>
 					</div>
-				</div>
-
-				<div>
-					<h1>
-						This aplicattion was made using the following technologies:
-						<br />
-						** React-NodeJS-Express
-					</h1>
+					<div className='flex p-5'>
+						<h1>
+							This aplicattion was made using the following technologies:
+							<br />
+							React-NodeJS-Express
+						</h1>
+					</div>
 				</div>
 			</div>
 		</>

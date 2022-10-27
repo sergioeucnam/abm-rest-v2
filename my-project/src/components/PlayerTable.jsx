@@ -52,7 +52,7 @@ const PlayerTable = () => {
 				</div>
 				<div
 					id='player-table'
-					className='overflow-y-auto h-[70vh] border-orange-800 border-2 w-11/12 mx-auto'
+					className='overflow-y-auto h-[70vh] border-slate-800 border-2 w-11/12 mx-auto'
 				>
 					<table className='mx-auto w-11/12 table-auto mt-8 overflow-y-auto h-[70vh] '>
 						<thead className='bg-slate-400'>
