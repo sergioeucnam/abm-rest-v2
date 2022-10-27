@@ -10,10 +10,23 @@
 
 ## Comenzando
 
-1.  Clonar el repo al local
-2.  En el path del proyecto ejecutar `npm i`
-3.  El proyecto se ejecuta en el puerto 3000 por default
-4.  Para correr el servidor ejecutar `npm start`
+1.  Clonar el repo al local `git clone '<GITHUB-LINK>' `
+
+### Servir el BACK-END
+
+    **Nota:** Para servir el back-end se debe tener instalado NodeJS y NPM.
+    **Atencion:** moverse a la carpeta respectiva dentro del proyecto y ejecutar los siguientes comandos.
+
+2.  dentro de /API_REST ejecutar `npm install` luego `npm run dev`
+
+### Servir el FRONT-END
+
+3.  dentro de /my-project ejecutar `npm install` luego `npm run dev`
+
+### Configuración
+
+4.  El backend se ejecuta en el puerto 3000 por default
+5.  El frontend se ejecuta en el puerto 5173 por default
 
 ## Postman
 
