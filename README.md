@@ -4,70 +4,73 @@
 
 # REST API - Technical
 
-## Objetivos del Proyecto
+## Project overview
 
-- Construir una API utlizando NodeJS.
+- Build a REST API using NodeJS.
 
-## Comenzando
+## Setup
 
-1.  Clonar el repo al local `git clone '<GITHUB-LINK>' `
+1. Clone the repo to your local `git clone '<GITHUB-LINK>' `
 
-### Servir el BACK-END
+### Serve the BACK-END
 
-    **Nota:** Para servir el back-end se debe tener instalado NodeJS y NPM.
-    **Atencion:** moverse a la carpeta respectiva dentro del proyecto y ejecutar los siguientes comandos.
+    **Note:** To serve the back-end and the front-end you must have NodeJS and NPM installed.
+    **Attention:** get sure to move to the correct folder before running the commands.
 
-2.  dentro de /API_REST ejecutar `npm install` luego `npm run dev`
+2. When inside /API_REST run `npm install` then `npm run dev`
 
-### Servir el FRONT-END
+### Serve the FRONT-END
 
-3.  dentro de /my-project ejecutar `npm install` luego `npm run dev`
+3. When inside /my-project run `npm install` then `npm run dev`
 
-### Configuración
+### Considerations
 
-4.  El backend se ejecuta en el puerto 3000 por default
-5.  El frontend se ejecuta en el puerto 5173 por default
+4. The front-end is served on port `5173` and the back-end on port `3000`.
 
 ## Postman
 
-1.  Importar template de las rutas `RestApiRequest.postman_collection.json`
-2.  Testear las rutas con los templates
+1. Import the template of the routes `RestApiRequest.postman_collection.json`
+2. Test the routes with the given data
 
-**IMPORTANTE:** Es necesario contar minimamente con la última versión estable de Node y NPM. Asegurarse de contar con ella para poder instalar correctamente las dependecias necesarias para correr el proyecto.
+**IMPORTANT:** You must have the latest stable version of Node and NPM. Make sure you have it to install the dependencies needed to run the project.
 
-Actualmente las versiónes necesarias son:
+Actually the required versions are:
 
-- **Node**: 12.18.3 o mayor
-- **NPM**: 6.14.16 o mayor
+- **Node**: 12.18.3+
+- **NPM**: 6.14.16+
 
-## Enunciado
+## Frontend
 
-API Test: Diseño de un REST API en node que consuma algún servicio de internet tipo: JSONPlaceholder - Fake online REST API for developers o ABM de una DB interna (sqlite es suficiente)
+The frontend consists of a ReactJS + Vite application that consumes the REST API.
 
-- Listar jugadores de la DB `mock`
-- Agregar / Eliminar jugadores
-- Editar jugadores
+## Requirements
 
-#### Base de datos
+**API Test: Diseño de un REST API en node que consuma algún servicio de internet tipo: JSONPlaceholder - Fake online REST API for developers o ABM de una DB interna (sqlite es suficiente)**
 
-Para este proyecto se emula una DB en memoria
+**- Listar jugadores de la DB `mock`**
+**- Agregar / Eliminar jugadores**
+**- Editar jugadores**
+
+#### Database
+
+For this project we are using a mock database, which is a JSON file that is located in the `root`.
 
 #### Backend
 
-Se desarrolla un servidor en Node/Express con las siguientes rutas:
+This backend is developed in Node/Express with the following routes:
 
 - [ ] **GET /**:
-  - Home con mensaje generico todo OK
+  - Home with generic message all OK
 - [ ] **GET /users**:
-  - Obtener un listado de usuarios desde API externa `JSONPlaceholder`
+  - Fetch a list of users from an external API `JSONPlaceholder`
 - [ ] **GET /api/players**:
-  - Obtener un listado de los jugadores desde la DB.
+  - Fetch a list of players from the DB.
 - [ ] **GET /api/players/{idPlayer}**:
-  - Obtener el detalle de un jugador en particular
-  - Debe traer solo los datos pedidos en la ruta de detalle del jugador
+  - Fetch the details of a player from the DB.
+  - Only returns the data requested in the player detail route
 - [ ] **PUT /api/players/{idPlayer}**:
-  - Debe recibir un objeto para editar los valores del jugador
+  - Send a player object to edit the player in the DB.
 - [ ] **POST /api/players**:
-  - Debe recibir un objeto mediante el cual se creara el jugador, emula un formulario controlado
+  - Should receive an object through which the player will be created, emulates a controlled form
 - [ ] **DELETE /api/players/{idPlayer}**:
-  - Elimina de la DB el jugador cuyo ID coincida
+  - Delete the player with the ID that matches the one sent in the request
